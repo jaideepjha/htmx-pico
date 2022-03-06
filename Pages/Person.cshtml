@@ -1,0 +1,22 @@
+﻿@page
+@model htmx_pico.Pages.PersonModel
+@{
+}
+<section>
+    <header>Editable Table</header>
+    <table>
+        <thead>
+            <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+            @foreach (var person in Model.People)
+            {
+                @await Html.PartialAsync("_Row", person)
+            }
+        </tbody>
+    </table>
+</section>

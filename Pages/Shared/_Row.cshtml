@@ -1,0 +1,25 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model htmx_pico.Pages.Person
+@{
+    var id = $"person-{Model.Id}";
+}
+
+<tr id="@id">
+    <td>
+        @Model.Name
+    </td>
+    <td>
+        @Model.Age
+    </td>
+    <td>
+        <button
+                hx-get="@Url.Page("Index", "Edit", new {Model.Id})"
+                hx-swap="outerHTML"
+                hx-target="closest tr">
+            
+            <span>Edit</span>
+        </button>
+    </td>
+</tr>

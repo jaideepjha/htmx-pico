@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>htmx_pico</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\lib\pico\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Htmx" Version="0.0.15" />
+    <PackageReference Include="Htmx.TagHelpers" Version="0.0.15" />
+  </ItemGroup>
+
+</Project>

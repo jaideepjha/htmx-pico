@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - htmx_pico</title>
+    <link rel="stylesheet" href="~/lib/pico/pico.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <strong><a asp-area="" asp-page="/Index">htmx_pico</a></strong>
+                </li>
+            </ul>
+             <ul>
+                 <li>
+                     <a asp-area="" asp-page="/Index">Home</a>
+                 </li>
+                 <li>
+                        <a asp-area="" asp-page="/Privacy">Privacy</a>
+                   </li>
+                   <li>
+                        <a asp-area="" asp-page="/Person">Person</a>
+                   </li>
+             </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - htmx_pico - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+@*    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>*@
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://unpkg.com/htmx.org@1.7.0"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
